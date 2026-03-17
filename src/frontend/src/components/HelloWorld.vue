@@ -51,13 +51,76 @@ const ideias = [
     <header class="topo">
       <div class="mascotes" aria-hidden="true">
         <Worm class="icone onda-1" />
-        <img
-          class="svg-mascote"
-          src="/minhoca-mascote.svg"
-          width="140"
-          height="84"
-          alt=""
-        />
+        <div class="minhoca-feliz-wrap">
+          <svg
+            class="svg-minhoca-feliz"
+            viewBox="0 0 272 96"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              class="solo-sombra"
+              cx="136"
+              cy="88"
+              rx="118"
+              ry="10"
+              fill="#3d2914"
+              opacity="0.12"
+            />
+            <g class="minhoca-corpo-inteiro">
+              <g class="seg-base" transform="translate(38,56)">
+                <g class="seg-ondula d0">
+                  <ellipse rx="15" ry="19" fill="#a86b5a" />
+                </g>
+              </g>
+              <g class="seg-base" transform="translate(68,50)">
+                <g class="seg-ondula d1">
+                  <ellipse rx="16" ry="21" fill="#b57465" />
+                </g>
+              </g>
+              <g class="seg-base" transform="translate(100,46)">
+                <g class="seg-ondula d2">
+                  <ellipse rx="17" ry="22" fill="#c17f6a" />
+                </g>
+              </g>
+              <g class="seg-base" transform="translate(134,44)">
+                <g class="seg-ondula d3">
+                  <ellipse rx="17" ry="22" fill="#c17f6a" />
+                </g>
+              </g>
+              <g class="seg-base" transform="translate(168,46)">
+                <g class="seg-ondula d4">
+                  <ellipse rx="16" ry="21" fill="#c17f6a" />
+                </g>
+              </g>
+              <g class="seg-base cabeca-minhoca" transform="translate(208,44)">
+                <g class="seg-ondula d5">
+                  <ellipse rx="22" ry="26" fill="#c17f6a" />
+                  <ellipse
+                    cx="-4"
+                    cy="-2"
+                    rx="18"
+                    ry="20"
+                    fill="#d49284"
+                    opacity="0.45"
+                  />
+                  <circle cx="-10" cy="-6" r="4" fill="#3d2914" />
+                  <circle cx="10" cy="-6" r="4" fill="#3d2914" />
+                  <circle cx="-9" cy="-7" r="1.4" fill="#fff" />
+                  <circle cx="11" cy="-7" r="1.4" fill="#fff" />
+                  <path
+                    d="M-14 8 Q0 20 14 8"
+                    fill="none"
+                    stroke="#3d2914"
+                    stroke-width="2.8"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="-16" cy="4" r="4" fill="#e8a0a0" opacity="0.65" />
+                  <circle cx="16" cy="4" r="4" fill="#e8a0a0" opacity="0.65" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
         <Worm class="icone onda-2" />
       </div>
       <h1 class="titulo">Terra das Minhocas</h1>
@@ -183,9 +246,73 @@ const ideias = [
   }
 }
 
-.svg-mascote {
+.minhoca-feliz-wrap {
+  width: min(220px, 72vw);
+  max-height: 100px;
+  filter: drop-shadow(0 6px 10px rgba(44, 32, 24, 0.12));
+}
+
+.svg-minhoca-feliz {
   display: block;
-  filter: drop-shadow(0 4px 6px rgba(44, 32, 24, 0.15));
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.minhoca-corpo-inteiro {
+  animation: minhoca-flutua 2.4s ease-in-out infinite;
+  transform-origin: 136px 70px;
+}
+
+@keyframes minhoca-flutua {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+.seg-ondula {
+  animation: ondula-segmento 0.65s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.d0 {
+  animation-delay: 0s;
+}
+.d1 {
+  animation-delay: 0.08s;
+}
+.d2 {
+  animation-delay: 0.16s;
+}
+.d3 {
+  animation-delay: 0.24s;
+}
+.d4 {
+  animation-delay: 0.32s;
+}
+.d5 {
+  animation-delay: 0.4s;
+}
+
+@keyframes ondula-segmento {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .minhoca-corpo-inteiro,
+  .seg-ondula {
+    animation: none;
+  }
 }
 
 .titulo {
