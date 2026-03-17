@@ -1,0 +1,13 @@
+[2026-03-17T19:16:27.845Z] 
+[2026-03-17T19:16:27.846Z]   VITE v8.0.0  ready in 558 ms
+[2026-03-17T19:16:27.846Z] 
+[2026-03-17T19:16:27.846Z]   ➜  Local:   http://localhost:5174/
+[2026-03-17T19:16:27.846Z]   ➜  Network: http://10.244.0.6:5174/
+[2026-03-17T19:21:20.219Z] 7:21:20 PM [vite] (client) page reload src/main.js
+[2026-03-17T19:21:20.602Z] 7:21:20 PM [vite] (client) ✨ new dependencies optimized: lucide-vue-next, vue-router
+[2026-03-17T19:21:20.602Z] 7:21:20 PM [vite] (client) ✨ optimized dependencies changed. reloading
+[2026-03-17T19:21:21.108Z] 7:21:21 PM [vite] (client) hmr update /src/App.vue, /src/style.css
+[2026-03-17T19:21:25.609Z] 7:21:25 PM [vite] (client) hmr update /src/components/HelloWorld.vue, /src/style.css
+[2026-03-17T19:21:26.960Z] 7:21:26 PM [vite] (client) hmr update /src/components/HelloWorld.vue, /src/style.css
+[2026-03-17T19:21:37.162Z] 7:21:37 PM [vite] (client) hmr update /src/components/HelloWorld.vue, /src/style.css
+[2026-03-17T19:37:47.469Z] 7:37:47 PM [vite] (client) hmr update /src/components/HelloWorld.vue, /src/components/HelloWorld.vue?vue&type=style&index=0&scoped=e17ea971&lang.css, /src/style.css

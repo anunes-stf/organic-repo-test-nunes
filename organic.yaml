@@ -1,0 +1,27 @@
+config:
+  modules:
+    - nodejs_24
+    - git
+    - curl
+    - jq
+  ports:
+    - "5174:5174"
+    - "5236:5236"
+  workflows:
+    runButton: "Start application"
+    workflow:
+      Start application:
+        description: "Start the application in development mode"
+        author: "System"
+        mode: "parallel"
+        tasks:
+          Frontend:
+            task: shell.exec
+            folder: "src/frontend"
+            waitForPort: 5174
+            args: "npm ci && npx vite --port 5174 --host 0.0.0.0"
+          Primary API server:
+            task: shell.exec
+            folder: "src/backend"
+            waitForPort: 5236
+            args: "npm ci && PORT=5236 npx nest start --watch"

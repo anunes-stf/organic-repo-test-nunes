@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" role="img" aria-label="Minhoca sorridente">
+  <ellipse cx="100" cy="95" rx="85" ry="18" fill="#3d2914" opacity="0.25"/>
+  <path fill="#c17f6a" d="M20 60 Q50 20 90 45 T160 50 Q185 55 175 75 Q165 95 130 88 T60 82 Q35 78 20 60"/>
+  <path fill="#a86b5a" d="M35 58 Q55 35 85 50 Q115 65 145 58 Q160 56 168 68 Q155 82 125 78 Q95 72 65 76 Q45 78 35 58"/>
+  <circle cx="168" cy="62" r="5" fill="#8b4a3c"/>
+  <circle cx="170" cy="60" r="1.8" fill="#fff"/>
+  <path stroke="#6b3d32" stroke-width="2" fill="none" d="M172 68 Q178 72 176 78" stroke-linecap="round"/>
+</svg>
