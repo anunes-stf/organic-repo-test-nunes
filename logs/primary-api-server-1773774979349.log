@@ -1,0 +1,9 @@
+[2026-03-17T19:16:35.908Z] [2J[3J[H[[90m7:16:35 PM[0m] Starting compilation in watch mode...
+[2026-03-17T19:16:35.908Z] 
+[2026-03-17T19:16:37.441Z] [[90m7:16:37 PM[0m] Found 0 errors. Watching for file changes.
+[2026-03-17T19:16:37.441Z] 
+[2026-03-17T19:16:37.776Z] [32m[Nest] 645  - [39m03/17/2026, 7:16:37 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[2026-03-17T19:16:37.783Z] [32m[Nest] 645  - [39m03/17/2026, 7:16:37 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +8ms[39m
+[2026-03-17T19:16:37.790Z] [32m[Nest] 645  - [39m03/17/2026, 7:16:37 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +7ms[39m
+[2026-03-17T19:16:37.792Z] [32m[Nest] 645  - [39m03/17/2026, 7:16:37 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[2026-03-17T19:16:37.794Z] [32m[Nest] 645  - [39m03/17/2026, 7:16:37 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m

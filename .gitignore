@@ -1,0 +1,12 @@
+node_modules/
+.nix-*
+result
+bin/
+obj/
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.docker-data/
