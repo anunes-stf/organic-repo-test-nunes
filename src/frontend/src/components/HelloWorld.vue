@@ -4,18 +4,18 @@ import { Worm, Sprout, Shovel, Heart } from 'lucide-vue-next'
 
 const fotos = [
   {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Earthworm_on_soil.jpg/800px-Earthworm_on_soil.jpg',
-    alt: 'Minhoca sobre solo escuro',
+    src: 'https://images.unsplash.com/photo-1669569713247-3c57d88dd18f?w=800&q=82&auto=format&fit=crop',
+    alt: 'Minhoca em close no solo',
     legenda: 'Modelando a passarela de barro',
   },
   {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Lumbricus_terrestris_01.jpg/640px-Lumbricus_terrestris_01.jpg',
-    alt: 'Minhoca em close',
+    src: 'https://images.unsplash.com/photo-1708191225887-0642eb28f6ac?w=800&q=82&auto=format&fit=crop',
+    alt: 'Minhoca rastejando na terra',
     legenda: 'Close de quem não usa filtro',
   },
   {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Compost.jpg/720px-Compost.jpg',
-    alt: 'Compostagem com matéria orgânica',
+    src: 'https://images.unsplash.com/photo-1623939646032-e6bdceceb673?w=800&q=82&auto=format&fit=crop',
+    alt: 'Folhas secas sobre solo rico em matéria orgânica',
     legenda: 'Buffet orgânico todo dia',
   },
 ]
@@ -174,10 +174,10 @@ const ideias = [
   inset: 0;
   background: linear-gradient(
     165deg,
-    #f4efe6 0%,
-    #e8ddd0 35%,
-    #d4c4b0 70%,
-    #c5b5a0 100%
+    var(--worm-grad-1) 0%,
+    var(--worm-grad-2) 35%,
+    var(--worm-grad-3) 70%,
+    var(--worm-grad-4) 100%
   );
   z-index: 0;
   pointer-events: none;
@@ -189,12 +189,12 @@ const ideias = [
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 80%,
-      rgba(74, 124, 89, 0.12) 0%,
+      var(--worm-radial-1) 0%,
       transparent 45%
     ),
     radial-gradient(
       circle at 85% 20%,
-      rgba(92, 64, 51, 0.08) 0%,
+      var(--worm-radial-2) 0%,
       transparent 40%
     );
 }
@@ -225,7 +225,7 @@ const ideias = [
 .icone {
   width: 2.5rem;
   height: 2.5rem;
-  color: #5c4033;
+  color: var(--worm-icone);
 }
 
 .onda-1 {
@@ -249,7 +249,11 @@ const ideias = [
 .minhoca-feliz-wrap {
   width: min(220px, 72vw);
   max-height: 100px;
+<<<<<<< HEAD
+  filter: drop-shadow(0 6px 10px var(--worm-drop));
+=======
   filter: drop-shadow(0 6px 10px rgba(44, 32, 24, 0.12));
+>>>>>>> github/main
 }
 
 .svg-minhoca-feliz {
@@ -318,14 +322,14 @@ const ideias = [
 .titulo {
   font-family: var(--heading);
   font-size: clamp(1.75rem, 5vw, 2.35rem);
-  color: #3d2914;
+  color: var(--worm-titulo);
   margin: 0 0 0.5rem;
   letter-spacing: -0.02em;
 }
 
 .sub {
   margin: 0;
-  color: #5c4d42;
+  color: var(--worm-sub);
   line-height: 1.5;
 }
 
@@ -340,11 +344,11 @@ const ideias = [
 
 .card-foto {
   margin: 0;
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--worm-card-bg);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(92, 64, 51, 0.15);
-  box-shadow: 0 8px 24px rgba(61, 41, 20, 0.08);
+  border: 1px solid var(--worm-card-border);
+  box-shadow: 0 8px 24px var(--worm-card-shadow);
 }
 
 .card-foto img {
@@ -357,7 +361,7 @@ const ideias = [
 .card-foto figcaption {
   padding: 0.65rem 0.85rem;
   font-size: 0.9rem;
-  color: #4a3f35;
+  color: var(--worm-figcap);
   text-align: left;
   font-style: italic;
 }
@@ -370,7 +374,7 @@ const ideias = [
 
 .sec-titulo {
   font-size: 1.15rem;
-  color: #3d2914;
+  color: var(--worm-sec-titulo);
   margin: 0 0 1rem;
   text-align: center;
 }
@@ -390,10 +394,10 @@ const ideias = [
   align-items: flex-start;
   text-align: left;
   padding: 1rem 1.1rem;
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--worm-item-bg);
   border-radius: 10px;
-  border: 1px solid rgba(74, 124, 89, 0.2);
-  color: #4a4038;
+  border: 1px solid var(--worm-item-border);
+  color: var(--worm-item-text);
   line-height: 1.45;
 }
 
@@ -401,13 +405,13 @@ const ideias = [
   width: 1.35rem;
   height: 1.35rem;
   flex-shrink: 0;
-  color: #4a7c59;
+  color: var(--worm-item-icone);
   margin-top: 0.15rem;
 }
 
 .cta-texto {
   margin: 0 0 0.5rem;
-  color: #5c4d42;
+  color: var(--worm-sub);
   font-size: 0.95rem;
 }
 
@@ -436,67 +440,7 @@ const ideias = [
 }
 
 .link-curiosidades:focus-visible {
-  outline: 2px solid #3d2914;
+  outline: 2px solid var(--worm-focus);
   outline-offset: 3px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .solo-bg {
-    background: linear-gradient(
-      165deg,
-      #2a241c 0%,
-      #352a22 40%,
-      #3d3228 100%
-    );
-  }
-
-  .solo-bg::after {
-    background-image: radial-gradient(
-        circle at 25% 75%,
-        rgba(74, 124, 89, 0.2) 0%,
-        transparent 45%
-      ),
-      radial-gradient(
-        circle at 80% 25%,
-        rgba(200, 180, 150, 0.06) 0%,
-        transparent 40%
-      );
-  }
-
-  .titulo {
-    color: #e8ddd0;
-  }
-
-  .sub,
-  .cta-texto {
-    color: #b5a898;
-  }
-
-  .icone {
-    color: #c9a882;
-  }
-
-  .card-foto {
-    background: rgba(45, 38, 32, 0.85);
-    border-color: rgba(200, 180, 150, 0.12);
-  }
-
-  .card-foto figcaption {
-    color: #c9b8a8;
-  }
-
-  .sec-titulo {
-    color: #e8ddd0;
-  }
-
-  .item-ideia {
-    background: rgba(45, 38, 32, 0.9);
-    border-color: rgba(74, 124, 89, 0.35);
-    color: #c9b8a8;
-  }
-
-  .item-icone {
-    color: #7cb88a;
-  }
 }
 </style>
