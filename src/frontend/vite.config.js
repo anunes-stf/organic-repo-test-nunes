@@ -10,7 +10,9 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    allowedHosts: ['.organic.local'],
+    allowedHosts: true,
+    host: '0.0.0.0',
+    port: 5000,
   },
   resolve: {
     alias: {

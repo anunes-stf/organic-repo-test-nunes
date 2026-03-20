@@ -249,11 +249,7 @@ const ideias = [
 .minhoca-feliz-wrap {
   width: min(220px, 72vw);
   max-height: 100px;
-<<<<<<< HEAD
   filter: drop-shadow(0 6px 10px var(--worm-drop));
-=======
-  filter: drop-shadow(0 6px 10px rgba(44, 32, 24, 0.12));
->>>>>>> github/main
 }
 
 .svg-minhoca-feliz {
