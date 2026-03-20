@@ -1,5 +1,5 @@
 <script setup>
-import { Sun, Moon, Monitor } from 'lucide-vue-next'
+import { Sun, Moon, Monitor, Flower2 } from 'lucide-vue-next'
 import { theme, setTheme } from '../theme.js'
 </script>
 
@@ -26,6 +26,17 @@ import { theme, setTheme } from '../theme.js'
     >
       <Moon class="ico" aria-hidden="true" />
       <span class="lbl">Escuro</span>
+    </button>
+    <button
+      type="button"
+      class="btn btn-pink"
+      :class="{ ativo: theme === 'pink' }"
+      :aria-pressed="theme === 'pink'"
+      title="Tema rosa"
+      @click="setTheme('pink')"
+    >
+      <Flower2 class="ico" aria-hidden="true" />
+      <span class="lbl">Rosa</span>
     </button>
     <button
       type="button"
@@ -80,6 +91,16 @@ import { theme, setTheme } from '../theme.js'
   color: var(--text-h);
   border-color: var(--accent-border);
   background: var(--accent-bg);
+}
+
+.btn-pink.ativo {
+  color: #be185d;
+  border-color: rgba(236, 72, 153, 0.5);
+  background: rgba(236, 72, 153, 0.1);
+}
+
+.btn-pink .ico {
+  color: #ec4899;
 }
 
 .ico {

@@ -2,31 +2,31 @@ import { ref } from 'vue'
 
 const STORAGE_KEY = 'theme'
 
+const VALID = ['light', 'dark', 'pink', 'system']
+
 const stored =
   typeof localStorage !== 'undefined'
     ? localStorage.getItem(STORAGE_KEY) || 'system'
     : 'system'
 
-export const theme = ref(
-  stored === 'light' || stored === 'dark' || stored === 'system'
-    ? stored
-    : 'system',
-)
+export const theme = ref(VALID.includes(stored) ? stored : 'system')
 
 function resolveDark() {
   if (theme.value === 'dark') return true
-  if (theme.value === 'light') return false
+  if (theme.value === 'light' || theme.value === 'pink') return false
   if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-color-scheme: dark)').matches
 }
 
 export function applyTheme() {
   if (typeof document === 'undefined') return
-  document.documentElement.classList.toggle('dark', resolveDark())
+  const el = document.documentElement
+  el.classList.toggle('dark', theme.value === 'dark')
+  el.classList.toggle('pink', theme.value === 'pink')
 }
 
 export function setTheme(mode) {
-  if (mode !== 'light' && mode !== 'dark' && mode !== 'system') return
+  if (!VALID.includes(mode)) return
   theme.value = mode
   try {
     localStorage.setItem(STORAGE_KEY, mode)

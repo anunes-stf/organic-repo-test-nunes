@@ -180,6 +180,67 @@ html.dark {
   --worm-drop: rgba(0, 0, 0, 0.35);
 }
 
+html.pink {
+  color-scheme: light;
+  --text: #7a3a5a;
+  --text-h: #3d0a26;
+  --bg: #fff0f5;
+  --border: #f5c6d8;
+  --code-bg: #fde8f0;
+  --accent: #ec4899;
+  --accent-bg: rgba(236, 72, 153, 0.1);
+  --accent-border: rgba(236, 72, 153, 0.5);
+  --social-bg: rgba(253, 232, 240, 0.6);
+  --shadow:
+    rgba(236, 72, 153, 0.12) 0 10px 15px -3px, rgba(236, 72, 153, 0.06) 0 4px 6px -2px;
+
+  --background: oklch(0.97 0.02 355);
+  --foreground: oklch(0.25 0.07 355);
+  --card: oklch(0.99 0.01 355);
+  --card-foreground: oklch(0.25 0.07 355);
+  --popover: oklch(0.99 0.01 355);
+  --popover-foreground: oklch(0.25 0.07 355);
+  --primary: oklch(0.55 0.22 355);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.93 0.04 355);
+  --secondary-foreground: oklch(0.35 0.1 355);
+  --muted: oklch(0.93 0.04 355);
+  --muted-foreground: oklch(0.55 0.08 355);
+  --accent-foreground: oklch(0.25 0.07 355);
+  --destructive: oklch(0.577 0.245 27.325);
+  --input: oklch(0.88 0.05 355);
+  --ring: oklch(0.65 0.18 355);
+  --sidebar: oklch(0.95 0.03 355);
+  --sidebar-foreground: oklch(0.25 0.07 355);
+  --sidebar-primary: oklch(0.55 0.22 355);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.93 0.04 355);
+  --sidebar-accent-foreground: oklch(0.35 0.1 355);
+  --sidebar-border: oklch(0.88 0.05 355);
+  --sidebar-ring: oklch(0.65 0.18 355);
+
+  --worm-grad-1: #fde8f0;
+  --worm-grad-2: #fad0e4;
+  --worm-grad-3: #f7b8d8;
+  --worm-grad-4: #f4a0cc;
+  --worm-radial-1: rgba(236, 72, 153, 0.14);
+  --worm-radial-2: rgba(190, 24, 93, 0.08);
+  --worm-titulo: #3d0a26;
+  --worm-sub: #7a3a5a;
+  --worm-icone: #be185d;
+  --worm-card-bg: rgba(255, 240, 248, 0.75);
+  --worm-card-border: rgba(236, 72, 153, 0.18);
+  --worm-card-shadow: rgba(190, 24, 93, 0.08);
+  --worm-figcap: #6d2f50;
+  --worm-sec-titulo: #3d0a26;
+  --worm-item-bg: rgba(255, 240, 248, 0.85);
+  --worm-item-border: rgba(236, 72, 153, 0.22);
+  --worm-item-text: #5a2540;
+  --worm-item-icone: #db2777;
+  --worm-focus: #3d0a26;
+  --worm-drop: rgba(190, 24, 93, 0.14);
+}
+
 html.dark #social .button-icon {
   filter: invert(1) brightness(2);
 }
